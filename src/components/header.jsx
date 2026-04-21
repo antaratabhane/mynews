@@ -11,7 +11,11 @@ const Header = () => {
             <li className='text-[#4a5d4a]'>Politics</li>
             <li className='text-[#4a5d4a]'>Sports</li>
         </ul>
-        <input type="text" className='w-80 bg-white rounded-full h-10 ml-auto px-4 shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff] outline-none'></input>
+        <input 
+        type="text" 
+        className='w-80 bg-white rounded-full h-10 ml-auto px-4 shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff] outline-none' 
+        placeholder="Search news..." 
+        />
         <select className='appearance-none ml-auto mr-4 h-10 rounded-full px-4 bg-[#f4f8dc] shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff]'>
             <option value="English">English</option>
             <option value="Hindi">Hindi</option>
