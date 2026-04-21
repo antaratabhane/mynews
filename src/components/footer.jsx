@@ -6,7 +6,7 @@ import { faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <div className='bg-linear-to-r from-[#e3ef9f] via-[#cfe46f] to-[#b9db4c] border-t border-t-black flex flex-col'>
-        <div className='flex'>
+        <div className='flex py-4'>
             <div className='flex-1 ps-6 flex flex-col'>
                 <div className='text-xl text-[#2f3e1f] font-bold py-4'>About</div>
                 <div className='py-4 pr-12 text-justify text-[#4f5d2f]'>MyNews is a trusted source for breaking News, Insightful analysis and comprehensive coverage from around the world</div>
@@ -44,8 +44,12 @@ const Footer = () => {
                 <div className='mb-3 text-[#3f4f24]'>Disclaimer</div>
             </div>
         </div>
+
+        <div className='px-10'>
+            <div className='border-t border-[#bcd27a]'></div>
+        </div>
         
-        <div className='flex justify-center text-sm border-t border-gray-400 py-7 text-[#5f6d3a]'>© 2026 MyNews. All Rights Reserved</div>
+        <div className='flex justify-center text-sm py-7 text-[#5f6d3a]'>© 2026 MyNews. All Rights Reserved</div>
     </div>
   )
 }
