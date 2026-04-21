@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='bg-linear-to-r from-[#e7efc8] via-[#dbeaa7] to-[#cfe68f] min-w-full h-14 flex items-center'>
+    <div className='bg-linear-to-r from-[#e7efc8] via-[#dbeaa7] to-[#cfe68f] min-w-full h-14 flex items-center flex-wrap'>
         <h2 className='text-3xl text-[#2f3e2f] font-bold ml-2'>MyNews</h2>
         <ul className='flex ml-4 w-4xl justify-around'>
             <li className='text-[#4a5d4a]'>Trending</li>
