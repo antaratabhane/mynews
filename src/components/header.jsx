@@ -1,15 +1,17 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 
-const Header = () => {
+const Header = ({setCategory}) => {
+
   return (
-    <div className='bg-linear-to-r from-[#e7efc8] via-[#dbeaa7] to-[#cfe68f] min-w-full h-14 flex items-center flex-wrap'>
+    <div className='bg-linear-to-r from-[#e7efc8] via-[#dbeaa7] to-[#cfe68f] min-w-full h-20 flex items-center flex-wrap'>
         <h2 className='text-3xl text-[#2f3e2f] font-bold ml-4'>MyNews</h2>
         <ul className='flex ml-6 justify-around gap-6'>
-            <li className='text-[#4a5d4a]'>Trending</li>
-            <li className='text-[#4a5d4a]'>Business</li>
-            <li className='text-[#4a5d4a]'>Techology</li>
-            <li className='text-[#4a5d4a]'>Politics</li>
-            <li className='text-[#4a5d4a]'>Sports</li>
+            <li className='text-[#4a5d4a]' onClick={ () => setCategory("trending") }>Trending</li>
+            <li className='text-[#4a5d4a]' onClick={ () => setCategory("business") }>Business</li>
+            <li className='text-[#4a5d4a]' onClick={ () => setCategory("technology") }>Technology</li>
+            <li className='text-[#4a5d4a]' onClick={ () => setCategory("politics") }>Politics</li>
+            <li className='text-[#4a5d4a]' onClick={ () => setCategory("sports") }>Sports</li>
         </ul>
         <input 
         type="text" 
