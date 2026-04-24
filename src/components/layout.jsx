@@ -10,9 +10,13 @@ const Layout = () => {
   const [page, setPage] = useState(1)
   return (
     <>
+    <div className="app-container">
       <Header setCategory={setCategory} setSearch={setSearch} />
+      <main className="scroll-area">
       <Body category={category} search={search} page={page} setPage={setPage}/>
+      </main>
       <Footer />
+      </div>
     </>
   )
 }

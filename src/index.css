@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+html {
+  /* Gives a reference for percentage heights */
+  height: 100%;
+  /* Stops the bounce at the root level */
+  overscroll-behavior-y: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  /* Extra safety for mobile Safari */
+  position: relative;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  /* Ensures the footer stays down if content is short */
+  min-height: 100vh; 
+}
+
+.scroll-area {
+  flex: 1;
+  /* Do NOT add overflow-y: auto here if you want natural window scrolling.
+     Adding it here creates a 'nested' scroll which is often less smooth. */
+}
