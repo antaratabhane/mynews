@@ -7,9 +7,10 @@ const Body = ({category, search, page, setPage}) => {
     yesterday.setDate(yesterday.getDate() - 1)
     const date = yesterday.toISOString().split("T")[0]
     const totalPages = Math.ceil(articles.length / 8);
+    const defaultImage = "https://media.istockphoto.com/id/503437085/photo/daily-newspaper-mock-up-with-fake-articles.jpg?s=612x612&w=0&k=20&c=ozyXfuMumr7B9Px6IJPE1gekaYFGQaESBUNsDfFc-14="
     useEffect(() => {
         const fetchNews = async() => {
-            const response = await fetch(`https://newsapi.org/v2/everything?q=${search || category}&from=${date}&sortBy=popularity&apiKey=${apikey}`)
+            const response = await fetch(`https://newsapi.org/v2/everything?q=${search || category}&from=${date}&sortBy=popularity&language=en&apiKey=${apikey}`)
             let data = await response.json()
             setArticles(data.articles)
         }
@@ -19,7 +20,12 @@ const Body = ({category, search, page, setPage}) => {
     <div className='bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center py-8'>
         {articles.slice((page - 1) * 8, page * 8).map((news, index) => (
             <div key={index} className='my-4 bg-[#e6e8c8] min-h-60 w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
-                <img src={news.urlToImage} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:object-cover'/>
+                <img src={news.urlToImage} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:object-cover'
+                    onError={(e) => {
+                        e.target.onerror = null; // prevents infinite loop
+                        e.target.src = "https://thumbs.dreamstime.com/b/news-woodn-dice-depicting-letters-bundle-small-newspapers-leaning-left-dice-34802664.jpg";
+                    }}
+                />
                 <div className='justify-center w-full p-4 md:w-2/3 mx-auto md:ps-6 flex flex-col md:justify-center gap-4'>
                     <h4 className='text-xl font-bold'>{news.title}</h4>
                     <div  className='text-xs'>{date}</div>
