@@ -8,12 +8,13 @@ const Layout = () => {
   const [category, setCategory] = useState("viral")
   const [search, setSearch] = useState()
   const [page, setPage] = useState(1)
+  const [lang, setLang] = useState("en")
   return (
     <>
     <div className="app-container">
-      <Header setCategory={setCategory} setSearch={setSearch} />
+      <Header setCategory={setCategory} setSearch={setSearch} setLang={setLang} />
       <main className="scroll-area">
-      <Body category={category} search={search} page={page} setPage={setPage}/>
+      <Body category={category} search={search} page={page} setPage={setPage} lang={lang} />
       </main>
       <Footer />
       </div>

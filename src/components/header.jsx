@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header = ({setCategory, setSearch}) => {
+const Header = ({setCategory, setSearch, setLang}) => {
   const [burger, setBurger] = useState(false)
 
   return (
@@ -37,7 +37,10 @@ const Header = ({setCategory, setSearch}) => {
       }}
       />
       
-      <select className='ml-auto order-4 md:justify-end md:appearance-none md:order-4 md:ml-0 mr-4 h-10 rounded-full px-4 shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff] text-[#4a5d4a] cursor-pointer'>
+      <select
+      onChange={(e) => setLang(e.target.value === "Hindi" ? "hi" : "en")} 
+      className='ml-auto order-4 md:justify-end md:appearance-none md:order-4 md:ml-0 mr-4 h-10 rounded-full px-4 shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff] text-[#4a5d4a] cursor-pointer'
+      >
         <option value="English">English</option>
         <option value="Hindi">Hindi</option>
       </select>
