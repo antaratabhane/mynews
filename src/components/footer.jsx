@@ -1,17 +1,18 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
     <div className='bg-linear-to-r from-[#e3ef9f] via-[#cfe46f] to-[#b9db4c] border-t border-t-black flex flex-col'>
-        <div className='flex py-4'>
-            <div className='flex-1 ps-6 flex flex-col'>
+        <div className='flex-wrap px-3 md:flex py-4'>
+            <div className='p-2 flex-1 md:ps-6 md:flex flex-col'>
                 <div className='text-xl text-[#2f3e1f] font-bold py-4'>About</div>
                 <div className='py-4 pr-12 text-justify text-[#4f5d2f]'>MyNews is a trusted source for breaking News, Insightful analysis and comprehensive coverage from around the world</div>
             </div>
 
-            <div className='flex-1 flex flex-col'>
+            <div className='pl-2 flex-1 md:flex flex-col'>
                 <div className='text-xl text-[#2f3e1f] font-bold py-4'>Contact</div>
                 <div className='flex flex-col py-4'>
                     <div className='pb-2 text-[#3f4f24]'><FontAwesomeIcon icon={faEnvelope} className='text-[#5f8209]'/> info@mynews.com</div>
@@ -24,7 +25,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='flex-1 flex flex-col'>
+            <div className='pl-2 flex-1 md:flex flex-col'>
                 <div className='text-xl text-[#2f3e1f] font-bold py-4'>Quick Links</div>
                 
                 <div className='mb-3 text-[#3f4f24]'>Home</div>
@@ -34,7 +35,7 @@ const Footer = () => {
                 <div className='mb-3 text-[#3f4f24]'>About Us</div>   
             </div>
 
-            <div className='flex-1 flex-col'>
+            <div className='pl-2 flex-1 md:flex-col'>
                 <div className='text-xl text-[#2f3e1f] font-bold py-4'>Legal</div>
 
                 <div className='mb-3 text-[#3f4f24]'>Privacy Policy</div>

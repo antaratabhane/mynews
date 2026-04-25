@@ -18,9 +18,9 @@ const Body = ({category, search, page, setPage}) => {
     return (
     <div className='bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center py-8'>
         {articles.slice((page - 1) * 8, page * 8).map((news, index) => (
-            <div key={index} className='my-4 bg-[#e6e8c8] h-60 w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
-                <img src={news.urlToImage} className='w-1/3 h-full rounded-l-2xl object-cover'/>
-                <div className='w-2/3 ps-6 flex flex-col justify-center gap-4'>
+            <div key={index} className='my-4 bg-[#e6e8c8] min-h-60 w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
+                <img src={news.urlToImage} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:object-cover'/>
+                <div className='justify-center w-full p-4 md:w-2/3 mx-auto md:ps-6 flex flex-col md:justify-center gap-4'>
                     <h4 className='text-xl font-bold'>{news.title}</h4>
                     <div  className='text-xs'>{date}</div>
                     <p className='text-justify pe-5 text-sm'>{news.description}</p>
