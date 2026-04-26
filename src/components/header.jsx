@@ -28,6 +28,7 @@ const Header = ({setCategory, setSearch, setLang}) => {
 
       <input 
       type="text" 
+      spellCheck="false"
       className='w-full order-5 md:w-80 md:order-3 md:ml-auto bg-[#f4f8dc] rounded-full h-10 justify-end mr-4 px-4 shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff] outline-none' 
       placeholder="Search news..." 
       onKeyDown={(e) => {
