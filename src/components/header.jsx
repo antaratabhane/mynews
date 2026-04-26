@@ -41,8 +41,8 @@ const Header = ({setCategory, setSearch, setLang}) => {
       onChange={(e) => setLang(e.target.value === "Hindi" ? "hi" : "en")} 
       className='ml-auto order-4 md:justify-end md:appearance-none md:order-4 md:ml-0 mr-4 h-10 rounded-full px-4 shadow-[5px_5px_10px_#c5d89a,-5px_-5px_10px_#ffffff] text-[#4a5d4a] cursor-pointer outline-none'
       >
-        <option value="English">English</option>
-        <option value="Hindi">Hindi</option>
+        <option className='bg-[#9ec92a] rounded-md focus:text-white hover:bg-[#e7efc8]' value="English">English</option>
+        <option className='bg-[#9ec92a] rounded-md focus:text-white hover:bg-[#e7efc8]' value="Hindi">Hindi</option>
       </select>
       
     </div>
