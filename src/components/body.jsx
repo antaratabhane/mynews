@@ -37,7 +37,7 @@ const Body = ({category, search, page, setPage, lang}) => {
     <div className='bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center py-8'>
         {translatedArticle.slice((page - 1) * 8, page * 8).map((news, index) => (
             <div key={index} className='my-4 bg-[#e6e8c8] min-h-60 w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
-                <img src={news.urlToImage} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:object-cover'
+                <img src={news.urlToImage} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:rounded-r-none md:object-cover'
                     onError={(e) => {
                         e.target.onerror = null;
                         e.target.src = "https://thumbs.dreamstime.com/b/news-woodn-dice-depicting-letters-bundle-small-newspapers-leaning-left-dice-34802664.jpg";
