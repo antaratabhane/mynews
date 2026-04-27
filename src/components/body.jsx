@@ -55,19 +55,19 @@ const Body = ({category, search, page, setPage, lang}) => {
         ))}
         </div>
         
-        <div className='w-full bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center justify-between py-8'>
-        <div className='flex gap-4 mt-8 mb-4'>
-            <button className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-10 h-10' onClick={() => setPage(page - 1)}>&#60;</button>
+        <div className='w-full bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center justify-between py-4 md:py-8'>
+        <div className='flex gap-4 mt-4 md:mt-8 mb-4'>
+            <button className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-6 h-6 md:w-10 md:h-10' onClick={() => setPage(page - 1)}>&#60;</button>
             {Array.from({length: 4}, (_ , i) => {
                 const pageNumber = page + i;
 
                 if(pageNumber < 1) return null;
 
                 return(
-                    <button key={i} className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-10 h-10' onClick={() => setPage(pageNumber)}>{pageNumber}</button>
+                    <button key={i} className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-6 h-6 md:w-10 md:h-10' onClick={() => setPage(pageNumber)}>{pageNumber}</button>
                 )
             })}
-            <button className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-10 h-10' onClick={() => setPage(page + 1)}>&#62;</button>
+            <button className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-6 h-6 md:w-10 md:h-10' onClick={() => setPage(page + 1)}>&#62;</button>
         </div>
         </div>
     </div>

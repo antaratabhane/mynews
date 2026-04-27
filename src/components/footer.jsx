@@ -5,7 +5,7 @@ import { faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <div className='bg-linear-to-r from-[#e3ef9f] via-[#cfe46f] to-[#b9db4c] border-t border-t-black flex flex-col'>
+    <div className='bg-linear-to-r from-[#e3ef9f] via-[#cfe46f] to-[#b9db4c] flex flex-col'>
         <div className='flex-wrap px-3 md:flex py-4'>
             <div className='p-2 flex-1 md:ps-6 md:flex flex-col'>
                 <div className='text-xl text-[#2f3e1f] font-bold py-4'>About</div>
