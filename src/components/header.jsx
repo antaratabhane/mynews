@@ -10,11 +10,11 @@ const Header = ({setCategory, setSearch, setLang, setBurger, burger}) => {
       <button className='order-1 md:hidden mx-4' onClick={() => setBurger(!burger)}><FontAwesomeIcon icon={faBars} /></button>
       <h2 className='order-2 text-3xl md:text-3xl md:order-1 text-[#2f3e2f] font-bold ml-4'>MyNews</h2>
       <ul className={`md:hidden flex-col ml-6 justify-around gap-3 cursor-pointer absolute top-12 left-0 px-3 pt-3 pb-3 bg-[#dfecac] rounded-md ${burger ? "flex" : "hidden"}`} >
-        <li className='text-[#4a5d4a] inline-block active:text-[#2f3e2f]' onClick={ () => setCategory("trending") }>Trending</li>
-        <li className='text-[#4a5d4a]' onClick={ () => setCategory("business") }>Business</li>
-        <li className='text-[#4a5d4a]' onClick={ () => setCategory("technology") }>Technology</li>
-        <li className='text-[#4a5d4a]' onClick={ () => setCategory("politics") }>Politics</li>
-        <li className='text-[#4a5d4a]' onClick={ () => setCategory("sports") }>Sports</li>
+        <li className='text-[#4a5d4a] inline-block active:text-[#e7efc8]' onClick={ () => setCategory("trending") }>Trending</li>
+        <li className='text-[#4a5d4a] inline-block active:text-[#e7efc8]' onClick={ () => setCategory("business") }>Business</li>
+        <li className='text-[#4a5d4a] inline-block active:text-[#e7efc8]' onClick={ () => setCategory("technology") }>Technology</li>
+        <li className='text-[#4a5d4a] inline-block active:text-[#e7efc8]' onClick={ () => setCategory("politics") }>Politics</li>
+        <li className='text-[#4a5d4a] inline-block active:text-[#e7efc8]' onClick={ () => setCategory("sports") }>Sports</li>
       </ul>
 
       <ul className='hidden order-3 md:flex md:order-2 ml-6 items-center gap-6 cursor-pointer'>
