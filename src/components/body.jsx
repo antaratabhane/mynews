@@ -35,27 +35,26 @@ const Body = ({category, search, page, setPage, lang}) => {
     }, [lang, articles])
 
     return (
-        <div className='w-full flex flex-col items-center flex-1'>
-    <div className='min-h-screen bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center py-8'>
-        {translatedArticle.slice((page - 1) * 8, page * 8).map((news, index) => (
-            <div key={index} className='my-4 bg-[#e6e8c8] min-h-60 w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
-                <img src={news.image} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:rounded-r-none md:object-cover'
-                    onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "https://thumbs.dreamstime.com/b/news-woodn-dice-depicting-letters-bundle-small-newspapers-leaning-left-dice-34802664.jpg";
-                    }}
-                />
-                <div className='flex-1 w-full p-4 md:w-2/3 mx-auto md:ps-6 flex flex-col md:justify-center gap-4'>
-                    <h4 className='text-xl font-bold'>{news.title}</h4>
-                    <div  className='text-xs'>{date}</div>
-                    <p className='text-justify pe-5 text-sm'>{news.description}</p>
-                </div>
-            </div>
-            
-        ))}
-        </div>
+    <div className='w-full flex flex-col items-center flex-1'>
+        <div className='min-h-screen bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center py-8'>
+            {translatedArticle.slice((page - 1) * 8, page * 8).map((news, index) => (
+                <div key={index} className='my-4 bg-[#e6e8c8] min-h-60 mx-8 md:w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
+                    <img src={news.image} className='rounded-t-2xl w-full md:w-1/3 md:h-auto md:rounded-l-2xl md:rounded-r-none md:object-cover'
+                        onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = "https://thumbs.dreamstime.com/b/news-woodn-dice-depicting-letters-bundle-small-newspapers-leaning-left-dice-34802664.jpg";
+                        }}
+                    />
+                    <div className='flex-1 w-full p-4 md:w-2/3 mx-auto md:ps-6 flex flex-col md:justify-center gap-4'>
+                        <h4 className='text-xl font-bold'>{news.title}</h4>
+                        <div  className='text-xs'>{date}</div>
+                        <p className='text-justify pe-5 text-sm'>{news.description}</p>
+                    </div>
+                </div>  
+            ))}
+    </div>
         
-        <div className='w-full bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center justify-between py-4 md:py-8'>
+    <div className='w-full bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center justify-between py-4 md:py-8'>
         <div className='flex gap-4 mt-4 md:mt-8 mb-4'>
             <button className='bg-[#E7EFC8] rounded-full shadow-[6px_6px_12px_#C5D89A,-6px_-6px_12px_#ffffff] w-6 h-6 md:w-10 md:h-10' onClick={() => setPage(page - 1)}>&#60;</button>
             {Array.from({length: 4}, (_ , i) => {
