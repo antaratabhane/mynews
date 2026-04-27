@@ -9,12 +9,13 @@ const Layout = () => {
   const [search, setSearch] = useState()
   const [page, setPage] = useState(1)
   const [lang, setLang] = useState("en")
+  const [burger, setBurger] = useState(false)
   return (
     <>
     <div className="app-container">
-      <Header setCategory={setCategory} setSearch={setSearch} setLang={setLang} />
+      <Header setCategory={setCategory} setSearch={setSearch} setLang={setLang} setBurger={setBurger} burger={burger} />
       <main className="scroll-area">
-      <Body category={category} search={search} page={page} setPage={setPage} lang={lang} />
+      <Body category={category} search={search} page={page} setPage={setPage} lang={lang} setBurger={setBurger} burger={burger} />
       </main>
       <Footer />
       </div>

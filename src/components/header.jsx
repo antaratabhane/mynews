@@ -3,15 +3,14 @@ import {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header = ({setCategory, setSearch, setLang}) => {
-  const [burger, setBurger] = useState(false)
+const Header = ({setCategory, setSearch, setLang, setBurger, burger}) => {
 
   return (
     <div className='bg-linear-to-r from-[#e7efc8] via-[#dbeaa7] to-[#cfe68f] min-w-full min-h-20 flex items-center flex-wrap gap-y-4 py-4 px-4 justify-start'>
       <button className='order-1 md:hidden mx-4' onClick={() => setBurger(!burger)}><FontAwesomeIcon icon={faBars} /></button>
       <h2 className='order-2 text-3xl md:text-3xl md:order-1 text-[#2f3e2f] font-bold ml-4'>MyNews</h2>
-      <ul className={`md:hidden flex-col ml-6 justify-around gap-3 cursor-pointer absolute top-8 left-0 px-3 pt-3 pb-3 bg-[#dfecac] rounded-md ${burger ? "flex" : "hidden"}`} >
-        <li className='text-[#4a5d4a]' onClick={ () => setCategory("trending") }>Trending</li>
+      <ul className={`md:hidden flex-col ml-6 justify-around gap-3 cursor-pointer absolute top-12 left-0 px-3 pt-3 pb-3 bg-[#dfecac] rounded-md ${burger ? "flex" : "hidden"}`} >
+        <li className='text-[#4a5d4a] inline-block focus:bg-[#9ec92a] focus:text-white' onClick={ () => setCategory("trending") }>Trending</li>
         <li className='text-[#4a5d4a]' onClick={ () => setCategory("business") }>Business</li>
         <li className='text-[#4a5d4a]' onClick={ () => setCategory("technology") }>Technology</li>
         <li className='text-[#4a5d4a]' onClick={ () => setCategory("politics") }>Politics</li>

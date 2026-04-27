@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { translateCard } from '../services/translateservices.js'
 const apikey = import.meta.env.VITE_API_KEY
-const Body = ({category, search, page, setPage, lang}) => {
+const Body = ({category, search, page, setPage, lang, setBurger, burger}) => {
     const [articles, setArticles] = useState([])
     const [translatedArticle, setTranslatedArticle] = useState([]) 
 
@@ -35,7 +35,7 @@ const Body = ({category, search, page, setPage, lang}) => {
     }, [lang, articles])
 
     return (
-    <div className='w-full flex flex-col items-center flex-1'>
+    <div className='w-full flex flex-col items-center flex-1' onClick={() => setBurger(!burger)}>
         <div className='min-h-screen bg-linear-to-r from-[#e9eccf] via-[#e2e6b8] to-[#c9d87a] flex flex-col items-center py-8'>
             {translatedArticle.slice((page - 1) * 8, page * 8).map((news, index) => (
                 <div key={index} className='my-4 bg-[#e6e8c8] min-h-60 mx-8 md:w-2/3 rounded-2xl flex flex-wrap shadow-[6px_6px_12px_#c4ce8a,-6px_-6px_12px_#ffffff]'>
