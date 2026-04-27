@@ -10,7 +10,7 @@ const Header = ({setCategory, setSearch, setLang, setBurger, burger}) => {
       <button className='order-1 md:hidden mx-4' onClick={() => setBurger(!burger)}><FontAwesomeIcon icon={faBars} /></button>
       <h2 className='order-2 text-3xl md:text-3xl md:order-1 text-[#2f3e2f] font-bold ml-4'>MyNews</h2>
       <ul className={`md:hidden flex-col ml-6 justify-around gap-3 cursor-pointer absolute top-12 left-0 px-3 pt-3 pb-3 bg-[#dfecac] rounded-md ${burger ? "flex" : "hidden"}`} >
-        <li className='text-[#4a5d4a] inline-block active:text-[#e7efc8] active:text-bold' onClick={ () => setCategory("trending") }>Trending</li>
+        <li className='text-[#4a5d4a] inline-block active:text-[#2f3e2f] active:text-bold' onClick={ () => setCategory("trending") }>Trending</li>
         <li className='text-[#4a5d4a]' onClick={ () => setCategory("business") }>Business</li>
         <li className='text-[#4a5d4a]' onClick={ () => setCategory("technology") }>Technology</li>
         <li className='text-[#4a5d4a]' onClick={ () => setCategory("politics") }>Politics</li>
