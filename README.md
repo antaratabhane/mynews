@@ -2,7 +2,7 @@
 
 > Stay informed. Stay ahead. Read what matters to you — in the language you love.
 
-<br><br>
+<br>
 
 ## 🖼️ UI Preview
 
@@ -11,13 +11,13 @@
 
 > *The UI follows a neumorphic design language with a soft green-beige palette, rounded cards, and elegant typography.*
 
-<br><br>
+<br>
 
 ## 🌐 Live Demo
 
 🔗 **[Visit MyNews](https://mynews-ten.vercel.app/)**
 
-<br><br>
+<br>
 
 ## 📖 About the Project
 
@@ -25,7 +25,7 @@
 
 The application is built with a clean and intuitive **neumorphic UI**, giving it a soft, tactile, and premium feel that stands out from conventional flat or material design. Every card, button, and surface has been crafted to feel smooth and modern, making the reading experience both visually pleasing and highly functional.
 
-<br><br>
+<br>
 
 ## ✨ Features
 
@@ -41,7 +41,7 @@ The application is built with a clean and intuitive **neumorphic UI**, giving it
 
 - ⚡ **Fast & Lightweight** — Powered by **Vite** and **React**, the application loads blazing fast and delivers a smooth, snappy user experience.
 
-<br><br>
+<br>
 
 ## 🛠️ Tech Stack
 
@@ -53,7 +53,7 @@ The application is built with a clean and intuitive **neumorphic UI**, giving it
 | 🌐 Translation | Custom Translation Service (`translateservices.js`) |
 | 🚀 Deployment | Vercel |
 
-<br><br>
+<br>
 
 ## 📁 Folder Structure
 
@@ -82,7 +82,7 @@ MyNews/
 └── README.md                   # Project documentation
 ```
 
-<br><br>
+<br>
 
 ## 🚀 Getting Started
 
@@ -140,7 +140,7 @@ npm run build
 npm run preview
 ```
 
-<br><br>
+<br>
 
 ## ☁️ Deployment
 
@@ -165,8 +165,7 @@ Contributions, issues, and feature requests are always welcome! If you would lik
 4. Push to the branch: `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 
-<br><br>
-
+<br>
 ## 📄 License
 
 This project is open source and available under the [MIT License](./LICENSE).
